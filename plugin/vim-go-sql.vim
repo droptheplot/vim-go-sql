@@ -1,4 +1,8 @@
 function! s:enable_vim_go_sql()
+  if !exists("b:current_syntax")
+    return
+  endif
+
   let s:b_current_syntax = b:current_syntax
   unlet b:current_syntax
 
